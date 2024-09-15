@@ -12,7 +12,7 @@ screen = pygame.display.set_mode((800, 600))
 # background
 background = pygame.image.load('peakpx.jpg')
 
-mixer.music.load('Space-Invaders-Pygame_background.wav at master · attreyabhatt_Space-Invaders-Pygame · GitHub.wav')
+mixer.music.load('Space-Invaders-Pygame_background.wav.wav')
 mixer.music.play(-1)
 
 # Title and icon
@@ -117,7 +117,7 @@ while running:
             if event.key == pygame.K_SPACE:
                 if bullet_state == "ready":
                     bullet_sound = mixer.Sound(
-                        'Space-Invaders-Pygame_laser.wav at master · attreyabhatt_Space-Invaders-Pygame · GitHub.wav')
+                        'Space-Invaders-Pygame_laser.wav.wav')
                     bullet_sound.play()
                     bulletX = playerX
                 fire_bullet(bulletX, bulletY)
@@ -155,7 +155,7 @@ while running:
         collision = isCollision(enemyX[i], enemyY[i], bulletX, bulletY)
         if collision:
             explosion_sound = mixer.Sound(
-                'Space-Invaders-Pygame_explosion.wav at master · attreyabhatt_Space-Invaders-Pygame · GitHub.wav')
+                'Space-Invaders-Pygame_explosion.wav.wav')
             explosion_sound.play()
             bulletY = 480
             bullet_state = "ready"
